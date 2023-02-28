@@ -1,0 +1,50 @@
+/* pages/chatroom/chatroom.wxss */
+.page-section-title{
+  width: 100%;
+  height: 20%;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  text-align: center;
+  background-color: greenyellow;
+}
+
+.content-page-section{
+  height: 850rpx;
+  margin-top: 60rpx;
+}
+
+.input-section{
+  flex-flow: row;
+  background-color: lightgray;
+  width: 100%;
+  height: 100rpx;
+}
+
+.input-box-view{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.input-box{
+  margin-top: 10rpx;
+  padding-left: 10rpx;
+  background-color: whitesmoke;
+  width: 60%;
+}
+
+.input-button{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 300rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}

@@ -1,0 +1,19 @@
+<view>
+  <view class="page-section">
+    <view class="page-section-title">
+      GPT Chat Room
+    </view>
+    <view class="content-page-section">
+      <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view id="demo1">{{content}}</view>
+        
+      </scroll-view>
+    </view>
+    <view class="input-section">
+      <view class="input-box-view">
+        <input class="input-box" scroll-y="true" placeholder="输入你想要的问题" type="string" bindconfirm="bindKeyConfirm"></input>
+      </view>
+      <button class="input-button" type="primary" bintap="submitQuestion">submit</button>
+    </view>
+  </view>
+</view>
