@@ -4,8 +4,22 @@
       GPT Chat Room
     </view>
     <view class="content-page-section">
-      <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <scroll-view scroll-y="true" style="height: 700rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
         <view id="demo1">{{content}}</view>
+        <block wx:for="{{chats}}">
+          <block wx:if="{{item.side=='left'}}">
+              <view class="chat-left">
+                <text style="border-radius: 30rpx;flex:0.6;text-align: left;max-width:fit-content;background-color: aqua;">{{item.content}}</text>
+              </view>
+          </block>
+          <block wx:if="{{item.side=='right'}}">
+              <view class="chat-right">
+                <text style="border-radius: 30rpx;flex:0.6;text-align: right;max-width:fit-content;background-color: aqua;">{{item.content}}</text>
+              </view>
+          </block>
+          
+          <view style="height: 20rpx"></view>  
+        </block>
         
       </scroll-view>
     </view>

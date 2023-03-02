@@ -1,11 +1,21 @@
 // pages/chatroom/chatroom.js
+function ChatItem (side, content){
+  this.side = side
+  this.content = content
+}
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    content: '我是一个初始值'
+    content: '我是一个初始值',
+    chats: [
+      new ChatItem('left', 'first sentence: i am a very long sentence -------'),
+      new ChatItem('right', 'second sentence'),
+      new ChatItem('left', 'third sentence')
+    ],
+    side: 'left'
   },
 
   bindKeyConfirm: function(e) {
@@ -13,6 +23,7 @@ Page({
     this.setData({
       content: e.detail.value
     })
+    chats.concat(new ChatItem(this.side, 'content'))
     e.detail.value = ''
   },
 
