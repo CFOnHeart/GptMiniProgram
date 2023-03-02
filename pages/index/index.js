@@ -13,6 +13,7 @@ Page({
   },
   // 事件处理函数
   bindViewTap() {
+    console.log("i'm tap")
     wx.navigateTo({
       url: '../chatroom/chatroom'
     })

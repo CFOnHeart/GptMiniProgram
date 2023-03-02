@@ -2,31 +2,46 @@
 .border-raduis {
   border-radius: 5rpx;
 }
+.page-section {
+ height: 100%;
+}
+
+.text-content-position {
+  padding-left:20rpx;
+  padding-right:20rpx;
+  padding-top:10rpx;
+  padding-bottom:10rpx; 
+  border-radius: 30rpx;
+  flex:0.6;
+  text-align: left;
+  max-width: 60%;
+  background-color: aqua;
+  word-wrap: break-word;
+}
 
 .page-section-title{
   width: 100%;
-  height: 20%;
+  height: 5%;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
   text-align: center;
   background-color: greenyellow;
 }
-
 .content-page-section{
-  height: 850rpx;
-  margin-top: 60rpx;
+  height: 80%;
+  margin-top: 10rpx;
 }
-
 .input-section{
   flex-flow: row;
-  background-color: lightgray;
+  border-top: 2rpx solid;
+  border-top-color: lightgray;
+  background-color: white;
   width: 100%;
-  height: 100rpx;
+  height: 15%;
 }
-
-.input-box-view{
-  margin-top: 10rpx;
-  margin-left: 20rpx;
+.scroll-view{
+  flex-flow: column;
+  height: 100%;
 }
 
 .chat-left{
@@ -34,36 +49,41 @@
   display: flex;
   background-color: lightgray;
   flex-direction: row;
+  float: left;
 }
 
 .chat-right {
   width: 100%;
+  display: flex;
   background-color: lightgreen;
-  flex-direction: row;
+  flex-direction: row-reverse;
   float: right;
   text-align: end;
 }
 
-.input-box{
+.chatroom-head-picture {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.input-box-view{
   margin-top: 10rpx;
-  padding-left: 10rpx;
-  background-color: whitesmoke;
-  width: 60%;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
 }
 
-.input-button{
-  width: 100rpx;
-  height: 100rpx;
+.input-box-label{
+  margin-top: 10rpx;
 }
 
-.scroll-view_H{
-  white-space: nowrap;
-}
-.scroll-view-item{
-  height: 300rpx;
-}
-.scroll-view-item_H{
-  display: inline-block;
-  width: 100%;
-  height: 300rpx;
+.input-box-text{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  background-color: white;
+  width: 80%;
+  border: 1rpx solid lightgray; 
+  border-radius: 10rpx;
 }

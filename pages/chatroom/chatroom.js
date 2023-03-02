@@ -10,35 +10,63 @@ Page({
    */
   data: {
     content: '我是一个初始值',
+    avatarUrl: 'bot-head.JPG',
     chats: [
-      new ChatItem('left', 'first sentence: i am a very long sentence -------'),
-      new ChatItem('right', 'second sentence'),
-      new ChatItem('left', 'third sentence')
+      new ChatItem(0, 'firstdsaaaaaasentence:iamaverylong sentence -------'),
+      new ChatItem(1, 'second sentence:  i am a very long sentence at the right side hhhhhh'),
+      new ChatItem(0, 'thirdsentencesdsassssssddsadsss'),
+      new ChatItem(1, '我打了一句中文，我想测试一下界面的换行效果是怎样的，感觉可能不太行。。。。'),
+      new ChatItem(0, 'firstdsaaaaaasentence:iamaverylong sentence -------'),
     ],
-    side: 'left'
+    side: 1, // 0 means left, 1 means right
+    inputText: "" 
   },
 
   bindKeyConfirm: function(e) {
-    console.log(e.detail.value)
+    console.log("用户输入了：" + e.detail.value)
+    temp = e.detail.value
     this.setData({
-      content: e.detail.value
+      chats: this.data.chats.concat([new ChatItem(1, e.detail.value), new ChatItem(0, "等待ai回复...")]),
+      inputText: ''
     })
-    chats.concat(new ChatItem(this.side, 'content'))
-    e.detail.value = ''
+    
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    console.log("I'm going onReady")
+    wx.getUserProfile({
+      desc: '用于展示头像',
+      success: (res) => {
+        this.setData({
+          avatarUrl: res.userInfo.avatarUrl
+        })
+      }
+    })
+  },
 
+  getUserProfile(e) {
+    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+    wx.getUserProfile({
+      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    
   },
 
   /**
