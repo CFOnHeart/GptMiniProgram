@@ -14,8 +14,8 @@
       <label class="login-input-view" style="width: 80%; margin-left: 30%; color: red; font-size: small; text-align: right;">{{notification}}</label>
     </view>
     <view class="login-input-view">
-      <button class="" bindtap="bindtapRegister">注册</button>
-      <button class="" bindtap="bindtapLogin">登录</button>
+      <button style="margin-left: 10%; margin-right: 10%; background-color: lightgreen; border-radius: 25%;" bindtap="bindtapRegister">注册</button>
+      <button style="margin-left: 10%; margin-right: 10%; background-color: lightgreen; border-radius: 25%;" bindtap="bindtapLogin">登录</button>
     </view>
   </block>
 </view>
