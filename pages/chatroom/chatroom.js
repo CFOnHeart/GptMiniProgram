@@ -11,6 +11,7 @@ Page({
   data: {
     content: '我是一个初始值',
     avatarUrl: 'bot-head.JPG',
+    userInfo: {},
     chats: [
       new ChatItem(0, 'firstdsaaaaaasentence:iamaverylong sentence -------'),
       new ChatItem(1, 'second sentence:  i am a very long sentence at the right side hhhhhh'),
@@ -39,13 +40,22 @@ Page({
   onLoad(options) {
     console.log("I'm going onReady")
     wx.getUserProfile({
-      desc: '用于展示头像',
+      desc: '登录',
       success: (res) => {
         this.setData({
-          avatarUrl: res.userInfo.avatarUrl
+          avatarUrl: res.userInfo.avatarUrl,
+          userInfo: res.userInfo
+        })
+      },
+      fail(err) {
+        wx.showToast({
+          title: '用户拒绝授权',
+          icon: "error",
+          duration: 1000
         })
       }
     })
+    console.log('show userinfo: ' + this.userInfo)
   },
 
   getUserProfile(e) {

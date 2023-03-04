@@ -1,0 +1,21 @@
+<!--pages/login/login.wxml-->
+<view class="the-whole-page">
+  <view class="title-section">登录界面</view>
+  <block>
+    <view class="login-input-view">
+      <label class="login-input-label">账号: </label>
+      <input class="login-input-text" placeholder="输入你的账号" type="text" model:value="{{account}}"></input>
+    </view>
+    <view class="login-input-view">
+      <label class="login-input-label">密码: </label>
+      <input class="login-input-text" placeholder="输入你的密码" type="safe-password" model:value="{{password}}"></input>
+    </view>
+    <view class="login-input-view">
+      <label class="login-input-view" style="width: 80%; margin-left: 30%; color: red; font-size: small; text-align: right;">{{notification}}</label>
+    </view>
+    <view class="login-input-view">
+      <button class="" bindtap="bindtapRegister">注册</button>
+      <button class="" bindtap="bindtapLogin">登录</button>
+    </view>
+  </block>
+</view>

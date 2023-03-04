@@ -9,7 +9,7 @@
         <block wx:for="{{chats}}">
           <block wx:if="{{item.side===0}}">
               <view class="chat-left" style="margin-bottom: 30rpx">
-                <image class="chatroom-head-picture"  mode="aspectFit" src="bot-head.JPG"></image>
+                <image class="chatroom-head-picture"  mode="aspectFit" src="bot.jpg"></image>
                 <view class="text-content-position">{{item.content}}</view>
               </view> 
           </block>
