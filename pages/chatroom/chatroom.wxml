@@ -1,10 +1,10 @@
-<import src="./chatboxModule" />
+<import src="../templates/chatbox" />
 <view style="height: 100vh">
   <view class="page-section">
     <view class="page-section-title">
       GPT Chat Room
     </view>
-    <template is="chatboxModule" data="{{chats}}"></template>
+    <template is="chatbox" data="{{chats}}"></template>
     <view class="input-section">
       <view class="input-box-view">
         <image src="keyboard.jpg" style="width: 70rpx;height: 70rpx; border-radius: 50%; margin-left: 10rpx; margin-right:20rpx"></image>

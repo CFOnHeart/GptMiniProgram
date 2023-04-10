@@ -1,0 +1,12 @@
+<!--pages/tabview/tabview.wxml-->
+<view style="height: 100vh;">
+  <view class="reverse-flow-row">
+    <view class="tab-pane">
+    haha
+    </view>
+    <view class="main-pane">
+    你好
+    </view>
+    
+  </view>
+</view>

@@ -18,6 +18,8 @@ Page({
       new ChatItem(0, 'thirdsentencesdsassssssddsadsss'),
       new ChatItem(1, '我打了一句中文，我想测试一下界面的换行效果是怎样的，感觉可能不太行。。。。'),
       new ChatItem(0, 'firstdsaaaaaasentence:iamaverylong sentence -------'),
+      new ChatItem(1, '我打了一句中文，我想测试一下界面的换行效果是怎样的，感觉可能不太行。。。。'),
+      new ChatItem(0, 'firstdsaaaaaasentence:iamaverylong sentence -------'),
     ],
     side: 1, // 0 means left, 1 means right
     inputText: "" 

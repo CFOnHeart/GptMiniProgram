@@ -15,7 +15,7 @@ Page({
   bindViewTap() {
     console.log("i'm tap")
     wx.navigateTo({
-      url: '../login/login'
+      url: '../tabview/tabview'
     })
   },
   onLoad() {

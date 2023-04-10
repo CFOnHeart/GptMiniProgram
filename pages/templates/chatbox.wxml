@@ -1,4 +1,4 @@
-<template name="chatboxModule">
+<template name="chatbox">
   <scroll-view scroll-y="true" class="content-page-section">
     <block wx:for="{{chats}}">
       <block wx:if="{{item.side===0}}">

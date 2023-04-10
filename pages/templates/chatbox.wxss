@@ -1,0 +1,22 @@
+.content-page-section{
+  height: 85%;
+  flex-flow: column;
+  margin-top: 10rpx;
+}
+
+.chat-left{
+  width: 100%;
+  display: flex;
+  background-color: lightgray;
+  flex-direction: row;
+  float: left;
+}
+
+.chat-right {
+  width: 100%;
+  display: flex;
+  background-color: lightgreen;
+  flex-direction: row-reverse;
+  float: right;
+  text-align: end;
+}

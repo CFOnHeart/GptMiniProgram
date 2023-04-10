@@ -1,0 +1,20 @@
+/* pages/tabview/tabview.wxss */
+.reverse-flow-row{
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+}
+
+.main-pane{
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  background-color: lightpink;
+}
+
+.tab-pane{
+  background-color: lightgrey;
+  height: 10%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
