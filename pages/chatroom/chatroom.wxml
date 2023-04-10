@@ -1,28 +1,10 @@
-<view style="height: 1200rpx">
+<import src="./chatboxModule" />
+<view style="height: 100vh">
   <view class="page-section">
     <view class="page-section-title">
       GPT Chat Room
     </view>
-    <view class="content-page-section">
-      <scroll-view scroll-y="true" class="scroll-view">
-        
-        <block wx:for="{{chats}}">
-          <block wx:if="{{item.side===0}}">
-              <view class="chat-left" style="margin-bottom: 30rpx">
-                <image class="chatroom-head-picture"  mode="aspectFit" src="bot.jpg"></image>
-                <view class="text-content-position">{{item.content}}</view>
-              </view> 
-          </block>
-          <block wx:if="{{item.side===1}}">
-              <view class="chat-right" style="margin-bottom: 30rpx">
-                <image class="chatroom-head-picture" mode="aspectFit" src="{{avatarUrl}}"></image>
-                <view class="text-content-position">{{item.content}}</view>
-              </view>
-          </block>
-        </block>
-        
-      </scroll-view>
-    </view>
+    <template is="chatboxModule" data="{{chats}}"></template>
     <view class="input-section">
       <view class="input-box-view">
         <image src="keyboard.jpg" style="width: 70rpx;height: 70rpx; border-radius: 50%; margin-left: 10rpx; margin-right:20rpx"></image>

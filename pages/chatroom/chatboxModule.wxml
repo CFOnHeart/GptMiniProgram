@@ -1,0 +1,18 @@
+<template name="chatboxModule">
+  <scroll-view scroll-y="true" class="content-page-section">
+    <block wx:for="{{chats}}">
+      <block wx:if="{{item.side===0}}">
+          <view class="chat-left" style="margin-bottom: 30rpx">
+            <image class="chatroom-head-picture"  mode="aspectFit" src="bot.jpg"></image>
+            <view class="text-content-position">{{item.content}}</view>
+          </view> 
+      </block>
+      <block wx:if="{{item.side===1}}">
+          <view class="chat-right" style="margin-bottom: 30rpx">
+            <image class="chatroom-head-picture" mode="aspectFit" src="bot.jpg"></image>
+            <view class="text-content-position">{{item.content}}</view>
+          </view>
+      </block>
+    </block>
+  </scroll-view>
+</template>
